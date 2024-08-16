@@ -1,0 +1,20 @@
+<template>
+    <div style="background: white;" class="slds-align_absolute-center slds-m-around_medium">
+
+        <lightning-input variant="label-hidden" type='search' label='Search' onchange={handleOnChange}></lightning-input>
+
+        <div class="slds-p-left_x-small">
+            <lightning-icon
+                icon-name="standard:apps"
+                alternative-text="Launcher"
+            ></lightning-icon>
+        </div>
+    </div>
+
+    <div if:false={isRecentCallsVisible} style="background: white;">
+        <template for:each={contacts} for:item="contact">
+            <c-phone-tile class="slds-col slds-size_1-of-1 " key={contact}></c-phone-tile>
+        </template>
+    </div>
+
+</template>

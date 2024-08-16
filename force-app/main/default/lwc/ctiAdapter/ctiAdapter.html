@@ -1,0 +1,8 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+        <c-softphone-call-screen incoming ={isIncoming} ></c-softphone-call-screen>
+    </template>
+</template>

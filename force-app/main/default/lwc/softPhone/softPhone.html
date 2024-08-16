@@ -1,0 +1,48 @@
+<template>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-horizontal_medium">
+                <div class="slds-col slds-size_1-of-12">
+                        <lightning-icon
+                        icon-name="utility:call"
+                        alternative-text="Phone Number"
+                            size="x-small"
+                      ></lightning-icon>
+                    </div>
+                <div class="phone-number slds-col slds-size_10-of-12">
+                    <input type="text" value={getPhoneNumber} disabled>
+                    </div>
+                <div class="slds-col slds-size_1-of-12" onclick={handleBackSpace}>
+                        <div class="backspace-button">
+                        <img src={getBackspaceIcon}>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-col slds-size_1-of-1 slds-grid slds-grid_align-space" for:each={dialPad} for:item="row" key={row}>
+                <div for:each={row} for:item="char" for:index="index" key={char}>
+                    <div class="slds-m-around_x-small">
+                        <div class="slds-align_absolute-center  digit" data-value={char} onmousedown={enterNumber}>
+                            <span>{char}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <div class="slds-m-vertical_medium">
+                    <lightning-icon
+                        class="call-button"
+                        icon-name="action:call"
+                        alternative-text="Call"
+                        size="small"
+                        onclick={handleCall}
+                    ></lightning-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

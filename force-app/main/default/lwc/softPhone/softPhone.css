@@ -1,0 +1,54 @@
+.phone-number{
+    input{
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      &:focus{
+        outline:none;
+      }
+    }
+  }
+
+  .digit{
+    height:60px;
+    width:60px;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    border-radius:100%;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.digit:hover {
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.digit:active {
+    background: rgb(193, 209, 222);
+    color: white;
+    animation: 2s;
+    box-sizing: border-box;
+}
+
+.alphabet {
+    color: rgb(41, 41, 41);
+}
+
+.call-button {
+    cursor: pointer;
+    padding: 0.8rem;
+}
+
+.call-button:hover {
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.call-button:active {
+    transform: scale(0.95);
+}
